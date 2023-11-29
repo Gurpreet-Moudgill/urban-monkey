@@ -18,7 +18,7 @@ function Register() {
   };
 
   const enter = async () => {
-    const resp = await axios.post("http://localhost:8081/login/post", data);
+    const resp = await axios.post("https://ecommerce-backend-e1gq.onrender.com/login/post", data);
     console.log(resp.data);
   };
 

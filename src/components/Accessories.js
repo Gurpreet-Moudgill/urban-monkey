@@ -11,7 +11,7 @@ function Accessories() {
   const [data, setData] = useState([]);
 
   const product = async () => {
-    const resp = await axios.get("http://localhost:8081/product/get");
+    const resp = await axios.get("https://ecommerce-backend-e1gq.onrender.com/product/get");
     console.log(resp.data.products);
     setData(resp.data.products);
   };
@@ -26,41 +26,41 @@ function Accessories() {
     console.log(newData);
 
     if (e.target.value === "lowtohigh") {
-      const data1 = await axios.get("http://localhost:8081/product/get/price");
+      const data1 = await axios.get("https://ecommerce-backend-e1gq.onrender.com/product/get/price");
       setData(data1.data.products);
     } else if (e.target.value === "hightolow") {
-      const data2 = await axios.get("http://localhost:8081/product/get/find");
+      const data2 = await axios.get("https://ecommerce-backend-e1gq.onrender.com/product/get/find");
       setData(data2.data.products);
     } else if (e.target.value === "90-1000") {
       const data3 = await axios.get(
-        `http://localhost:8081/product/get/data?price=${Number(
+        `https://ecommerce-backend-e1gq.onrender.com/product/get/data?price=${Number(
           newData[0]
         )}&value2=${Number(newData[1])}`
       );
       setData(data3.data.products);
     } else if (e.target.value === "1000-3000") {
       const data3 = await axios.get(
-        `http://localhost:8081/product/get/data?price=${Number(
+        `https://ecommerce-backend-e1gq.onrender.com/product/get/data?price=${Number(
           newData[0]
         )}&value2=${Number(newData[1])}`
       );
       setData(data3.data.products);
     } else if (e.target.value === "3000-6000") {
       const data3 = await axios.get(
-        `http://localhost:8081/product/get/data?price=${Number(
+        `https://ecommerce-backend-e1gq.onrender.com/product/get/data?price=${Number(
           newData[0]
         )}&value2=${Number(newData[1])}`
       );
       setData(data3.data.products);
     } else if (e.target.value === "new") {
       const data4 = await axios.get(
-        `http://localhost:8081/product/get/bro?stock=${newData1}`
+        `https://ecommerce-backend-e1gq.onrender.com/product/get/bro?stock=${newData1}`
       );
       console.log(newData1[0]);
       setData(data4.data.products);
     } else if (e.target.value === "popularity") {
       const data4 = await axios.get(
-        `http://localhost:8081/product/get/bro?stock=${newData1}`
+        `https://ecommerce-backend-e1gq.onrender.com/product/get/bro?stock=${newData1}`
       );
       // console.log(newData1[0]);
       setData(data4.data.products);

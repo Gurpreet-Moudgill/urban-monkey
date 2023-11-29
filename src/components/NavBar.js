@@ -19,7 +19,7 @@ function NavBar() {
   };
 
   const product = async () => {
-    const resp = await axios.get("http://localhost:8081/product/get");
+    const resp = await axios.get("https://ecommerce-backend-e1gq.onrender.com/product/get");
     // console.log(resp.data.products);
     setData(resp.data.products);
   };

@@ -21,7 +21,7 @@ function Login() {
 
   //Fetching Data from the Login API
   const product = async () => {
-    const resp = await axios.get("http://localhost:8081/login");
+    const resp = await axios.get("https://ecommerce-backend-e1gq.onrender.com/login");
     console.log(resp.data.details);
     setData1(resp.data.details);
   };
@@ -40,7 +40,7 @@ function Login() {
     e.preventDefault();
     try {
       const resp = await axios.post(
-        `http://localhost:8081/a?email=${email}&password=${password}`
+        `https://ecommerce-backend-e1gq.onrender.com/a?email=${email}&password=${password}`
       );
       setData(resp.data);
       console.log(data);
